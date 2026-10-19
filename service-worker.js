@@ -1,20 +1,10 @@
-// service-worker.js — gerado pelo Mini SK em 19/10/2026, 11:20:50
+// service-worker.js — gerado pelo Mini SK em 19/10/2026, 13:55:45
 // Não precisa mexer: ele guarda sozinho o que o app usa.
-const PREFIXO = 'sk-laboratoriomodular1910-';
-const CACHE = PREFIXO + 'mvfcdpxx';
+const PREFIXO = 'sk-laboratorio-modular-19-10-';
+const CACHE = PREFIXO + 'mvfhwxxj';
 // Lista feita automaticamente (para funcionar sem internet logo após instalar)
 const GUARDAR = [
   "./",
-  "./android/app/build.gradle",
-  "./android/app/src/main/AndroidManifest.xml",
-  "./android/app/src/main/assets/__ponte.js",
-  "./android/app/src/main/java/app/minisk/shell/MainActivity.java",
-  "./android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
-  "./android/app/src/main/res/xml/rede.xml",
-  "./android/build.gradle",
-  "./android/gradle.properties",
-  "./android/settings.gradle",
-  "./apk.config.json",
   "./css/00-casca.css",
   "./css/02-importar.css",
   "./css/03-dependencias.css",
@@ -26,14 +16,17 @@ const GUARDAR = [
   "./css/09-integracao.css",
   "./css/10-celular.css",
   "./css/11-lab.css",
-  "./electron/main.cjs",
-  "./electron/preload.cjs",
   "./favicon.ico",
+  "./ferramentas/ai-code-studio.html",
   "./ferramentas/arrumador.html",
   "./ferramentas/colador.html",
   "./ferramentas/faxina.html",
+  "./ferramentas/iara-suite.html",
+  "./ferramentas/juntador.html",
   "./ferramentas/numerador.html",
   "./ferramentas/preparador.html",
+  "./ferramentas/projeto-lab.html",
+  "./ferramentas/replicador.html",
   "./hub.html",
   "./hub.webmanifest",
   "./icons/apple-touch-icon.png",
@@ -74,6 +67,7 @@ const GUARDAR = [
   "./js/15-lab-comparar.js",
   "./js/15a-tar.js",
   "./js/16-lab-ferramentas.js",
+  "./js/17-lab-termux.js",
   "./kits/juntar.py",
   "./kits/kit-replit.cjs",
   "./kits/organizar.py",
@@ -82,9 +76,7 @@ const GUARDAR = [
   "./lib/jszip.min.js",
   "./lib/pako.min.js",
   "./manifest.json",
-  "./package.json",
-  "./PLANO.md",
-  "./RECEITA.md"
+  "./PLANO.md"
 ];
 
 self.addEventListener('install', (e) => {

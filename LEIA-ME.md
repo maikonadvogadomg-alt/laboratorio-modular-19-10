@@ -1,4 +1,4 @@
-# 🔬 ProjetoLens — o Laboratório (19/10, etapas 1, 2 e 3)
+# 🔬 Laboratório (19/10) — feito a partir do ProjetoLens do Claude 4.6
 
 Feito a partir dos pedaços que o Claude 4.6 entregou soltos ("SUBSTITUA isto por aquilo").
 Agora está **montado de verdade, em módulos**, testado no navegador e no tamanho de celular.
@@ -46,13 +46,27 @@ As descrições dos pacotes vêm em inglês (a tradução entra com a IA, na eta
 Abrem aqui dentro, cada uma guardando os próprios dados: **Faxina de Repetidos**, **Arrumador de Backups**, **Numerador de Códigos**, **Preparador Universal**, **Colador de Links**.
 **Kits para baixar** (rodam fora do navegador): Kit do Replit (`kit-replit.cjs`), Servidorzinho (`servir.py`), Organizador do Celular (`organizar.py`), Juntar (`juntar.py`).
 
+### 📱 Terminal de verdade (Termux)
+A **mesma ponte do Mini SK**, que já funciona:
+1. No Termux, só da 1ª vez: `pkg install -y ttyd`
+2. No Termux, toda vez: `ttyd -W -i 127.0.0.1 -p 7681 bash` (deixe o Termux aberto)
+3. No Laboratório: 📱 Terminal de verdade → **🔌 Conectar**.
+- **🧩 Ligar a ponte** → **⬆ Mandar o projeto** (vai para `~/laboratorio/NOME`) → rode `npm install` / `npm run build` → **⬇ Trazer do Termux** (a pasta `dist` volta e a 🧪 Prévia abre ela).
+- Botões prontos: `npm install`, `npm run build`, `ls -la`, `termux-wake-lock`.
+- Só o seu celular enxerga (127.0.0.1) e a ponte de arquivos pede um código guardado no aparelho.
+- Abra o Laboratório pelo **Chrome** (arquivo ou site): dentro do chat ele não conecta.
+
+### 📂 Seus códigos (nas 🧰 Ferramentas)
+Os códigos do Claude antigo que vieram na pasta "alguns códigos montar", do jeito que vieram: **AI Code Studio** (chat com Gemini, Claude, GPT, Groq — ponha a sua chave nele), **Projeto Lab**, **Replicador de Projeto**, **Iara Suite** (a versão que eu já tinha consertado: a original travava por usar o nome `buildTarget` duas vezes) e **Juntador de Arquivos**.
+⚠️ O arquivo **PLANO_RECUPERACAO** ficou de fora de propósito: ele tem o endereço de um banco Neon com senha.
+
 ### Testado (19/10)
-Projeto HTML (CSS com @import, imagem, módulos, JSON), projeto React/Vite com TSX + Tailwind + "@/", juntar soltos, extrair pedaço, todos os comandos de pesquisa, a comparação de duas versões reais do Jurídico (achou a mudança da porta no main.cjs) e as 5 ferramentas abrindo e funcionando aqui dentro. Também no tamanho de celular. Zero erros.
+Projeto HTML (CSS com @import, imagem, módulos, JSON), projeto React/Vite com TSX + Tailwind + "@/", juntar soltos, extrair pedaço, todos os comandos de pesquisa, a comparação de duas versões reais do Jurídico (achou a mudança da porta no main.cjs) as 10 ferramentas abrindo aqui dentro, e a ponte do Termux mandando o projeto e trazendo a pasta `dist` de volta (testada com a mesma ponte rodando no computador). Também no tamanho de celular. Zero erros.
 
 Conserto extra: o importador do 4.6 tratava `.cjs`, `.mjs`, `.ini`, `.webmanifest`… como "binário" e não lia o texto. Agora lê.
 
 ## Próximas etapas
-4. IA com sua chave (plano modular, tradução das dependências, memória do que aprendeu) · 5. Proxy em cascata (com base no manual do Replit), Drive, ponte com terminal de verdade (Termux / PC, escolher a porta) e manual completo.
+4. IA com sua chave (plano modular, tradução das dependências, memória do que aprendeu) · 5. Proxy em cascata (com base no manual do Replit), Drive e manual completo.
 
 ## O que foi feito na montagem
 - Juntei os pedaços na casca (`index.html`): cada tela no seu lugar, cada código no seu arquivo.
@@ -91,7 +105,7 @@ Importei a versão completa do Jurídico: 114 arquivos, 113 dependências, 101 r
 - `css/00-casca.css` … `css/09-integracao.css` — o visual de cada módulo · `css/10-celular.css` (novo)
 - `js/00-casca.js` — estado, navegação, auto-salvar
 - `js/02-importar.js`, `03-dependencias.js`, `04-analisar.js`, `05a-markdown.js`, `05-plano.js`, `06-scripts.js`, `06b-scripts-fim.js`, `07a-busca-npm.js`, `07-terminal.js`, `08-exportar.js`, `09-integracao.js` · `10-celular.js` (novo)
-- `js/11-lab-base.js` (quem chama quem), `12-lab-mapa.js`, `13-lab-previa.js`, `14-lab-pesquisa.js`, `15-lab-comparar.js` (+ `15a-tar.js`), `16-lab-ferramentas.js` · `css/11-lab.css` — o Laboratório
-- `ferramentas/` — as 5 ferramentas · `kits/` — os 4 kits
+- `js/11-lab-base.js` (quem chama quem), `12-lab-mapa.js`, `13-lab-previa.js`, `14-lab-pesquisa.js`, `15-lab-comparar.js` (+ `15a-tar.js`), `16-lab-ferramentas.js`, `17-lab-termux.js` · `css/11-lab.css` — o Laboratório
+- `ferramentas/` — as 5 ferramentas + os 5 códigos seus · `kits/` — os 4 kits
 - `lib/` — JSZip e pako (para funcionar sem internet)
 - O importador agora também **guarda as imagens** (antes jogava fora) — a Prévia precisa delas.

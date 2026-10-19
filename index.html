@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProjetoLens — Analisador de Projetos</title>
+  <title>🔬 Laboratório</title>
   <link rel="stylesheet" href="css/00-casca.css">
 <link rel="stylesheet" href="css/02-importar.css">
 <link rel="stylesheet" href="css/03-dependencias.css">
@@ -21,7 +21,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="laboratoriom">
+  <meta name="apple-mobile-web-app-title" content="Laboratorio-">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -35,7 +35,7 @@
 <body>
 <div class="app-loader" id="app-loader">
   <div class="app-loader-logo">🔬</div>
-  <div class="app-loader-title">ProjetoLens</div>
+  <div class="app-loader-title">Laboratório</div>
   <div class="app-loader-sub">Carregando módulos...</div>
   <div class="app-loader-bar">
     <div class="app-loader-fill"></div>
@@ -49,7 +49,7 @@
     <button id="btn-toggle-sidebar" title="Toggle Sidebar">☰</button>
     <div class="logo">
       <div class="icon">🔬</div>
-      ProjetoLens
+      Laboratório
       <span class="sub">v1.0</span>
     </div>
     <div class="spacer"></div>
@@ -128,6 +128,10 @@
         <span class="nav-icon">🧰</span>
         <span class="nav-label">Ferramentas</span>
       </button>
+      <button class="nav-item" data-module="termux" onclick="Shell.navigate('termux')">
+        <span class="nav-icon">📱</span>
+        <span class="nav-label">Terminal de verdade</span>
+      </button>
     </div>
 
     <div class="sidebar-divider"></div>
@@ -184,7 +188,7 @@
       <div class="module-panel active" id="panel-welcome">
         <div id="welcome-screen">
           <div class="welcome-logo">🔬</div>
-          <h1>ProjetoLens</h1>
+          <h1>🔬 Laboratório</h1>
           <p>Importe seu projeto, analise dependências, detecte bugs, gere planos completos e scripts de recriação — tudo no navegador.</p>
           <div class="welcome-grid">
             <div class="welcome-card" onclick="Shell.navigate('importer')">
@@ -1615,6 +1619,7 @@
       <div class="module-panel" id="panel-previa"></div>
       <div class="module-panel" id="panel-comparar"></div>
       <div class="module-panel" id="panel-ferramentas"></div>
+      <div class="module-panel" id="panel-termux"></div>
 
     </div><!-- fim modules-container -->
   </main>
@@ -1637,7 +1642,7 @@
 
 <!-- Barra de status inferior -->
 <div id="statusbar">
-  <div class="sb-item">🔬 ProjetoLens</div>
+  <div class="sb-item">🔬 Laboratório</div>
   <div class="sb-item"><span class="status-dot" id="sb-dot"></span> <span id="sb-project">Nenhum projeto</span></div>
   <div class="sb-item" id="sb-module">📍 Início</div>
   <div class="sb-spacer"></div>
@@ -1669,5 +1674,6 @@
 <script src="js/15a-tar.js"></script>
 <script src="js/15-lab-comparar.js"></script>
 <script src="js/16-lab-ferramentas.js"></script>
+<script src="js/17-lab-termux.js"></script>
 </body>
 </html>

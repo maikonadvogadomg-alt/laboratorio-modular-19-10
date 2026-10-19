@@ -1,13 +1,13 @@
-# 🧬 Receita para recriar: ProjetoLens — Analisador de Projetos
+# 🧬 Receita para recriar: 🔬 Laboratório
 
-_Gerada sem IA, lendo 75 arquivo(s). Serve para remontar este app como HTML modular — com qualquer IA, um arquivo por vez._
+_Gerada sem IA, lendo 78 arquivo(s). Serve para remontar este app como HTML modular — com qualquer IA, um arquivo por vez._
 
 ## 1. O que é
 
-- **Nome:** ProjetoLens — Analisador de Projetos
-- **Partes de código:** 44 (7 tela, 26 logica, 0 servidor, 0 dados, 11 estilo)
+- **Nome:** 🔬 Laboratório
+- **Partes de código:** 50 (12 tela, 27 logica, 0 servidor, 0 dados, 11 estilo)
 - **Tem servidor (rotas /api):** não — dá para ser só HTML
-- **Peças de fora (bibliotecas):** child_process, electron, fs, http, path, readline, url, x, zlib
+- **Peças de fora (bibliotecas):** @capacitor/cli, child_process, electron, fs, http, os, path, react-native, react-native-webview, readline, url, x, zlib
 
 ## 2. Estrutura modular proposta
 
@@ -36,17 +36,23 @@ js/91-lab-pesquisa.js ← LABORATÓRIO — 14-lab-pesquisa.js · 🔎 PESQUISA D
 js/92-lab-comparar.js ← LABORATÓRIO — 15-lab-comparar.js · ⚖️ COMPARAR A × B 3 jeitos: 📁 Dois (era js/15-lab-comparar.js)
 js/93-15a-tar.js      ← tar.js — abre .tar.gz / .tgz / .taz / .tar (o formato que o Replit bai (era js/15a-tar.js)
 js/94-lab-ferramentas.js← LABORATÓRIO — 16-lab-ferramentas.js · 🧰 SUAS FERRAMENTAS NUM LUGAR SÓ (era js/16-lab-ferramentas.js)
-js/95-juntar.js       ← -*- coding: utf-8 -*- (era kits/juntar.py)
-js/96-kit-replit.js   ← !/usr/bin/env node (era kits/kit-replit.cjs)
-js/97-organizar.js    ← -*- coding: utf-8 -*- (era kits/organizar.py)
+js/95-lab-termux.js   ← LABORATÓRIO — 17-lab-termux.js · 📱 TERMINAL DE VERDADE (Termux) A mes (era js/17-lab-termux.js)
+js/96-juntar.js       ← -*- coding: utf-8 -*- (era kits/juntar.py)
+js/97-kit-replit.js   ← !/usr/bin/env node (era kits/kit-replit.cjs)
+js/98-organizar.js    ← -*- coding: utf-8 -*- (era kits/organizar.py)
 js/98-servir.js       ← -*- coding: utf-8 -*- (era kits/servir.py)
+js/98-ai-code-studio.js← AI Code Studio — 🤖 AI Code Studio (era ferramentas/ai-code-studio.html)
 js/98-arrumador.js    ← Arrumador de Backups — 🗃 Arrumador de Backups (era ferramentas/arrumador.html)
 js/98-colador.js      ← Colador de Links — 🔗 Colador de Links (era ferramentas/colador.html)
 js/98-faxina.js       ← 🧹 Faxina de Repetidos — 🧹 Faxina de Repetidos (era ferramentas/faxina.html)
+js/98-iara-suite.js   ← Iara Suite — Code Editor · APK Builder · Site Extractor — Olá, Mundo! (era ferramentas/iara-suite.html)
+js/98-juntador.js     ← Juntador de Arquivos — 🧩 Juntador de Arquivos (era ferramentas/juntador.html)
 js/98-numerador.js    ← Numerador de Códigos — 🔢 Numerador de Códigos (era ferramentas/numerador.html)
 js/98-preparador.js   ← Preparador Universal — 🧰 Preparador Universal (era ferramentas/preparador.html)
+js/98-projeto-lab.js  ← Projeto Lab (era ferramentas/projeto-lab.html)
+js/98-replicador.js   ← Replicador de Projeto (era ferramentas/replicador.html)
 js/98-hub.js          ← Laboratorio-modular-19-10 — Laboratorio-modular-19-10 (era hub.html)
-js/98-inicio.js       ← ProjetoLens — Analisador de Projetos — ProjetoLens (era index.html)
+js/98-inicio.js       ← 🔬 Laboratório — 🔬 Laboratório (era index.html)
 js/99-app.js          ← o último: monta a tela com o que embarcou
 ```
 
@@ -76,35 +82,41 @@ js/99-app.js          ← o último: monta a tela com o que embarcou
 | 20 | `js/15-lab-comparar.js` | `js/92-lab-comparar.js` | logica | LABORATÓRIO — 15-lab-comparar.js · ⚖️ COMPARAR A × B 3 jeitos: 📁 Dois arquivos do projeto | — |
 | 21 | `js/15a-tar.js` | `js/93-15a-tar.js` | logica | tar.js — abre .tar.gz / .tgz / .taz / .tar (o formato que o Replit baixa) aqui mesmo, sem  | — |
 | 22 | `js/16-lab-ferramentas.js` | `js/94-lab-ferramentas.js` | logica | LABORATÓRIO — 16-lab-ferramentas.js · 🧰 SUAS FERRAMENTAS NUM LUGAR SÓ Cada ferramenta abr | — |
-| 23 | `kits/juntar.py` | `js/95-juntar.js` | logica | -*- coding: utf-8 -*- | x.css, x.js |
-| 24 | `kits/kit-replit.cjs` | `js/96-kit-replit.js` | logica | !/usr/bin/env node | — |
-| 25 | `kits/organizar.py` | `js/97-organizar.js` | logica | -*- coding: utf-8 -*- | — |
-| 26 | `kits/servir.py` | `js/98-servir.js` | logica | -*- coding: utf-8 -*- | — |
-| 27 | `ferramentas/arrumador.html` | `js/98-arrumador.js` | tela | Arrumador de Backups — 🗃 Arrumador de Backups | — |
-| 28 | `ferramentas/colador.html` | `js/98-colador.js` | tela | Colador de Links — 🔗 Colador de Links | manifest.json |
-| 29 | `ferramentas/faxina.html` | `js/98-faxina.js` | tela | 🧹 Faxina de Repetidos — 🧹 Faxina de Repetidos | — |
-| 30 | `ferramentas/numerador.html` | `js/98-numerador.js` | tela | Numerador de Códigos — 🔢 Numerador de Códigos | — |
-| 31 | `ferramentas/preparador.html` | `js/98-preparador.js` | tela | Preparador Universal — 🧰 Preparador Universal | package.json |
-| 32 | `hub.html` | `js/98-hub.js` | tela | Laboratorio-modular-19-10 — Laboratorio-modular-19-10 | hub.webmanifest, favicon.ico, icon.svg, apple-touch-icon.png |
-| 33 | `css/00-casca.css` | css/app.css | estilo | ===== RESET & VARIÁVEIS ===== | — |
-| 34 | `css/02-importar.css` | css/app.css | estilo | ===== IMPORTADOR ===== | — |
-| 35 | `css/03-dependencias.css` | css/app.css | estilo | ===== DEPS MODULE ===== | — |
-| 36 | `css/04-analisar.css` | css/app.css | estilo | ===== ANALYZER MODULE ===== | — |
-| 37 | `css/05-plano.css` | css/app.css | estilo | ===== PLANNER MODULE ===== | — |
-| 38 | `css/06-scripts.css` | css/app.css | estilo | ===== SCRIPTS MODULE ===== | — |
-| 39 | `css/07-terminal.css` | css/app.css | estilo | ===== TERMINAL MODULE ===== | — |
-| 40 | `css/08-exportar.css` | css/app.css | estilo | ===== EXPORTADOR MODULE ===== | — |
-| 41 | `css/09-integracao.css` | css/app.css | estilo | ===== INTEGRAÇÃO FINAL ===== | — |
-| 42 | `css/10-celular.css` | css/app.css | estilo | 10-celular.css — feito na montagem: o ProjetoLens no celular. A barra lateral sai do camin | — |
-| 43 | `css/11-lab.css` | css/app.css | estilo | 11-lab.css — visual das telas do Laboratório (Mapa, Prévia) | — |
-| 44 | `index.html` | `js/98-inicio.js` | tela | ProjetoLens — Analisador de Projetos — ProjetoLens | 00-casca.css, 02-importar.css, 03-dependencias.css, 04-analisar.css |
+| 23 | `js/17-lab-termux.js` | `js/95-lab-termux.js` | logica | LABORATÓRIO — 17-lab-termux.js · 📱 TERMINAL DE VERDADE (Termux) A mesma ponte do Mini SK  | — |
+| 24 | `kits/juntar.py` | `js/96-juntar.js` | logica | -*- coding: utf-8 -*- | x.css, x.js |
+| 25 | `kits/kit-replit.cjs` | `js/97-kit-replit.js` | logica | !/usr/bin/env node | — |
+| 26 | `kits/organizar.py` | `js/98-organizar.js` | logica | -*- coding: utf-8 -*- | — |
+| 27 | `kits/servir.py` | `js/98-servir.js` | logica | -*- coding: utf-8 -*- | — |
+| 28 | `ferramentas/ai-code-studio.html` | `js/98-ai-code-studio.js` | tela | AI Code Studio — 🤖 AI Code Studio | — |
+| 29 | `ferramentas/arrumador.html` | `js/98-arrumador.js` | tela | Arrumador de Backups — 🗃 Arrumador de Backups | — |
+| 30 | `ferramentas/colador.html` | `js/98-colador.js` | tela | Colador de Links — 🔗 Colador de Links | manifest.json |
+| 31 | `ferramentas/faxina.html` | `js/98-faxina.js` | tela | 🧹 Faxina de Repetidos — 🧹 Faxina de Repetidos | — |
+| 32 | `ferramentas/iara-suite.html` | `js/98-iara-suite.js` | tela | Iara Suite — Code Editor · APK Builder · Site Extractor — Olá, Mundo! | — |
+| 33 | `ferramentas/juntador.html` | `js/98-juntador.js` | tela | Juntador de Arquivos — 🧩 Juntador de Arquivos | — |
+| 34 | `ferramentas/numerador.html` | `js/98-numerador.js` | tela | Numerador de Códigos — 🔢 Numerador de Códigos | — |
+| 35 | `ferramentas/preparador.html` | `js/98-preparador.js` | tela | Preparador Universal — 🧰 Preparador Universal | package.json |
+| 36 | `ferramentas/projeto-lab.html` | `js/98-projeto-lab.js` | tela | Projeto Lab | — |
+| 37 | `ferramentas/replicador.html` | `js/98-replicador.js` | tela | Replicador de Projeto | — |
+| 38 | `hub.html` | `js/98-hub.js` | tela | Laboratorio-modular-19-10 — Laboratorio-modular-19-10 | hub.webmanifest, favicon.ico, icon.svg, apple-touch-icon.png |
+| 39 | `css/00-casca.css` | css/app.css | estilo | ===== RESET & VARIÁVEIS ===== | — |
+| 40 | `css/02-importar.css` | css/app.css | estilo | ===== IMPORTADOR ===== | — |
+| 41 | `css/03-dependencias.css` | css/app.css | estilo | ===== DEPS MODULE ===== | — |
+| 42 | `css/04-analisar.css` | css/app.css | estilo | ===== ANALYZER MODULE ===== | — |
+| 43 | `css/05-plano.css` | css/app.css | estilo | ===== PLANNER MODULE ===== | — |
+| 44 | `css/06-scripts.css` | css/app.css | estilo | ===== SCRIPTS MODULE ===== | — |
+| 45 | `css/07-terminal.css` | css/app.css | estilo | ===== TERMINAL MODULE ===== | — |
+| 46 | `css/08-exportar.css` | css/app.css | estilo | ===== EXPORTADOR MODULE ===== | — |
+| 47 | `css/09-integracao.css` | css/app.css | estilo | ===== INTEGRAÇÃO FINAL ===== | — |
+| 48 | `css/10-celular.css` | css/app.css | estilo | 10-celular.css — feito na montagem: o ProjetoLens no celular. A barra lateral sai do camin | — |
+| 49 | `css/11-lab.css` | css/app.css | estilo | 11-lab.css — visual das telas do Laboratório (Mapa, Prévia) | — |
+| 50 | `index.html` | `js/98-inicio.js` | tela | 🔬 Laboratório — 🔬 Laboratório | 00-casca.css, 02-importar.css, 03-dependencias.css, 04-analisar.css |
 
 ## 4. Montar passo a passo (cada bloco é um pedido pronto: 📋 Copiar → colar na IA)
 
 ### Passo 0 — combinar as regras com a IA
 
 ```text
-Vamos recriar o app "ProjetoLens — Analisador de Projetos" como HTML MODULAR, que abre pelo index.html, sem servidor e sem nada da Replit.
+Vamos recriar o app "🔬 Laboratório" como HTML MODULAR, que abre pelo index.html, sem servidor e sem nada da Replit.
 Regras: (1) index.html chama os arquivos js/ na ordem, antes do </body>; (2) js/00-core.js cria window.APP com APP.registrar(modulo), APP.guardar(chave, valor) em IndexedDB/localStorage e APP.avisar(texto); (3) cada arquivo js/NN-nome.js cuida de UM assunto, começa com (function (APP) { e termina com })(window.APP); (4) js/99-app.js vem por último e monta a tela com os módulos registrados; (5) textos em português do Brasil.
 Vou pedir UM arquivo por vez. Responda só com o arquivo completo, sem cortar nada. Primeiro: crie index.html, css/app.css e js/00-core.js.
 ```
@@ -117,7 +129,7 @@ O original usava as bibliotecas electron: em HTML puro, use a versão de CDN (ou
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 2 — `js/15-casca.js` (era `js/00-casca.js`, 323 linhas)
+### Passo 2 — `js/15-casca.js` (era `js/00-casca.js`, 325 linhas)
 
 ```text
 Crie js/15-casca.js. Ele faz: SHELL PRINCIPAL — ProjetoLens Estado global, navegação, abas, toast, modal, autosave.
@@ -270,40 +282,49 @@ No app original ele tinha estas funções/partes: ehTar, descompactar, texto, oc
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 21 — `js/94-lab-ferramentas.js` (era `js/16-lab-ferramentas.js`, 69 linhas)
+### Passo 21 — `js/94-lab-ferramentas.js` (era `js/16-lab-ferramentas.js`, 81 linhas)
 
 ```text
 Crie js/94-lab-ferramentas.js. Ele faz: LABORATÓRIO — 16-lab-ferramentas.js · 🧰 SUAS FERRAMENTAS NUM LUGAR SÓ Cada ferramenta abre aqui dentro (e continua guardando os dados dela). Versão em módulos: os arquivos ficam em ferramentas/ e kits/. Versão de arquivo único: vão embutidos (window.LAB_EMBUTIDO).
-No app original ele tinha estas funções/partes: bytes, tela, abrirAqui, telaPropria, kit.
+No app original ele tinha estas funções/partes: bytes, tela, cartao, achar, abrirAqui, telaPropria, kit.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 22 — `js/95-juntar.js` (era `kits/juntar.py`, 67 linhas)
+### Passo 22 — `js/95-lab-termux.js` (era `js/17-lab-termux.js`, 211 linhas)
 
 ```text
-Crie js/95-juntar.js. Ele faz: -*- coding: utf-8 -*-.
+Crie js/95-lab-termux.js. Ele faz: LABORATÓRIO — 17-lab-termux.js · 📱 TERMINAL DE VERDADE (Termux) A mesma ponte do Mini SK (que já funciona), trazida para cá: - liga o Laboratório ao Termux do celular (ttyd: ws://127.0.0.1:7681/ws) - ⬆ manda o projeto importado para ~/laboratorio/NOME no Termux.
+No app original ele tinha estas funções/partes: status, carregarScript, carregarCss, prepararTela, escreverTela, enviar, tamanho, conectar, desconectar, copiar, nome, dentro, responder, corpo, andar, codigo, chamar, ping.
+O original usava as bibliotecas http, fs, path, os: em HTML puro, use a versão de CDN (ou faça sem ela, se for simples).
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 23 — `js/96-juntar.js` (era `kits/juntar.py`, 67 linhas)
+
+```text
+Crie js/96-juntar.js. Ele faz: -*- coding: utf-8 -*-.
 No app original ele tinha estas funções/partes: juntar, ler, css, img.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 23 — `js/96-kit-replit.js` (era `kits/kit-replit.cjs`, 168 linhas)
+### Passo 24 — `js/97-kit-replit.js` (era `kits/kit-replit.cjs`, 168 linhas)
 
 ```text
-Crie js/96-kit-replit.js. Ele faz: !/usr/bin/env node.
+Crie js/97-kit-replit.js. Ele faz: !/usr/bin/env node.
 No app original ele tinha estas funções/partes: data, humano, rel, listar, lerJSON, examinar, TAB, crc32, criarZip, escreve, relatorio, pacoteLimpo, pacoteMontados, montarUm, pergunta.
 O original usava as bibliotecas fs, path, zlib, readline, child_process: em HTML puro, use a versão de CDN (ou faça sem ela, se for simples).
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 24 — `js/97-organizar.js` (era `kits/organizar.py`, 466 linhas)
+### Passo 25 — `js/98-organizar.js` (era `kits/organizar.py`, 466 linhas)
 
 ```text
-Crie js/97-organizar.js. Ele faz: -*- coding: utf-8 -*-.
+Crie js/98-organizar.js. Ele faz: -*- coding: utf-8 -*-.
 No app original ele tinha estas funções/partes: tipo_de, humano, onde, prioridade, ler_log, gravar_log, dentro, mover, resumo_hash, examinar, separar, arrumar_download, desfazer, revisar_info, apagar_copias, Pagina, log_message, responder.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 25 — `js/98-servir.js` (era `kits/servir.py`, 119 linhas)
+### Passo 26 — `js/98-servir.js` (era `kits/servir.py`, 119 linhas)
 
 ```text
 Crie js/98-servir.js. Ele faz: -*- coding: utf-8 -*-.
@@ -311,14 +332,23 @@ No app original ele tinha estas funções/partes: achar_site, porta_da_pasta, ab
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 26 — `js/98-arrumador.js` (era `ferramentas/arrumador.html`, 404 linhas)
+### Passo 27 — `js/98-ai-code-studio.js` (era `ferramentas/ai-code-studio.html`, 1721 linhas)
+
+```text
+Crie js/98-ai-code-studio.js. Ele faz: AI Code Studio — 🤖 AI Code Studio.
+No app original ele tinha estas funções/partes: est, uid, isMobile, escapeHtml, copyText, activeConv, MODULE_Storage, save, saveSoon, load, normMemory, stamp, download, exportAll, importBackup, handleImport, MODULE_Provider, models.
+Ele chamava estes endereços: https://api.anthropic.com/v1/messages, https://api.anthropic.com/v1/models?limit=100, https://google.serper.dev/search. Em HTML, ligue cada um à função equivalente do módulo certo.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 28 — `js/98-arrumador.js` (era `ferramentas/arrumador.html`, 404 linhas)
 
 ```text
 Crie js/98-arrumador.js. Ele faz: Arrumador de Backups — 🗃 Arrumador de Backups.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 27 — `js/98-colador.js` (era `ferramentas/colador.html`, 776 linhas)
+### Passo 29 — `js/98-colador.js` (era `ferramentas/colador.html`, 776 linhas)
 
 ```text
 Crie js/98-colador.js. Ele faz: Colador de Links — 🔗 Colador de Links.
@@ -326,21 +356,39 @@ No app original ele tinha estas funções/partes: uid, ler, gravar, nomeDe, pint
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 28 — `js/98-faxina.js` (era `ferramentas/faxina.html`, 470 linhas)
+### Passo 30 — `js/98-faxina.js` (era `ferramentas/faxina.html`, 470 linhas)
 
 ```text
 Crie js/98-faxina.js. Ele faz: 🧹 Faxina de Repetidos — 🧹 Faxina de Repetidos.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 29 — `js/98-numerador.js` (era `ferramentas/numerador.html`, 241 linhas)
+### Passo 31 — `js/98-iara-suite.js` (era `ferramentas/iara-suite.html`, 1536 linhas)
+
+```text
+Crie js/98-iara-suite.js. Ele faz: Iara Suite — Code Editor · APK Builder · Site Extractor — Olá, Mundo!.
+No app original ele tinha estas funções/partes: qsa, lsSet, switchTab, detectProvider, getActiveSlot, updateAIStatus, openKeyModal, closeKeyModal, renderSlots, autoDetectSlot, toggleSlotActive, saveSlots, callAI, initEditor, renderFileList, fileIcon, openFile, onCodeChange.
+O original usava as bibliotecas @capacitor/cli, electron, path, react-native, react-native-webview: em HTML puro, use a versão de CDN (ou faça sem ela, se for simples).
+Ele chamava estes endereços: https://api.anthropic.com/v1/messages, https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent. Em HTML, ligue cada um à função equivalente do módulo certo.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 32 — `js/98-juntador.js` (era `ferramentas/juntador.html`, 437 linhas)
+
+```text
+Crie js/98-juntador.js. Ele faz: Juntador de Arquivos — 🧩 Juntador de Arquivos.
+No app original ele tinha estas funções/partes: esc, uid, toast, ext, lang, isTexto, bytesFmt, linhas, decode, pareceBinario, b64, unb64, inflate, lerZip, CRC, crc32, escreverZip, textoDocx.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 33 — `js/98-numerador.js` (era `ferramentas/numerador.html`, 241 linhas)
 
 ```text
 Crie js/98-numerador.js. Ele faz: Numerador de Códigos — 🔢 Numerador de Códigos.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 30 — `js/98-preparador.js` (era `ferramentas/preparador.html`, 833 linhas)
+### Passo 34 — `js/98-preparador.js` (era `ferramentas/preparador.html`, 833 linhas)
 
 ```text
 Crie js/98-preparador.js. Ele faz: Preparador Universal — 🧰 Preparador Universal.
@@ -348,7 +396,25 @@ O original usava as bibliotecas electron, path, fs, http: em HTML puro, use a ve
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 31 — `js/98-hub.js` (era `hub.html`, 81 linhas)
+### Passo 35 — `js/98-projeto-lab.js` (era `ferramentas/projeto-lab.html`, 2006 linhas)
+
+```text
+Crie js/98-projeto-lab.js. Ele faz: Projeto Lab.
+No app original ele tinha estas funções/partes: esc, tick, fmtSize, fmtDate, normPath, dirname, basename, extOf, joinPath, hex, inflate, mask, lineFinder, parseLenientJSON, langOf, sniff, zipEntries, parsePax.
+Ele chamava estes endereços: https://api.anthropic.com/v1/messages, https://api.anthropic.com/v1/models?limit=100. Em HTML, ligue cada um à função equivalente do módulo certo.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 36 — `js/98-replicador.js` (era `ferramentas/replicador.html`, 805 linhas)
+
+```text
+Crie js/98-replicador.js. Ele faz: Replicador de Projeto.
+No app original ele tinha estas funções/partes: goTab, toggleFilePanel, loadZip, processZip, root, renderFileList, filterFiles, openFile, copyViewer, downloadViewer, sendFileToAI, renderAnalysis, buildPkgJson, buildCommands, buildTree, print, refreshModels, saveKey.
+Ele chamava estes endereços: https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest, ${bases[provider]}/chat/completions. Em HTML, ligue cada um à função equivalente do módulo certo.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 37 — `js/98-hub.js` (era `hub.html`, 81 linhas)
 
 ```text
 Crie js/98-hub.js. Ele faz: Laboratorio-modular-19-10 — Laboratorio-modular-19-10.
@@ -356,18 +422,18 @@ No app original ele tinha estas funções/partes: rec, esc, card, show.
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 32 — `js/98-inicio.js` (era `index.html`, 1674 linhas)
+### Passo 38 — `js/98-inicio.js` (era `index.html`, 1680 linhas)
 
 ```text
-Crie js/98-inicio.js. Ele faz: ProjetoLens — Analisador de Projetos — ProjetoLens.
-Ele usa o que já foi criado em: js/15-casca.js, js/20-importar.js, js/25-dependencias.js, js/30-analisar.js, js/40-05a-markdown.js, js/35-plano.js, js/45-scripts.js, js/50-06b-scripts-fim.js, js/60-07a-busca-npm.js, js/55-terminal.js, js/65-exportar.js, js/70-integracao.js, js/75-celular.js, js/80-lab-base.js, js/85-lab-mapa.js, js/90-lab-previa.js, js/91-lab-pesquisa.js, js/93-15a-tar.js, js/92-lab-comparar.js, js/94-lab-ferramentas.js (pelo APP).
+Crie js/98-inicio.js. Ele faz: 🔬 Laboratório — 🔬 Laboratório.
+Ele usa o que já foi criado em: js/15-casca.js, js/20-importar.js, js/25-dependencias.js, js/30-analisar.js, js/40-05a-markdown.js, js/35-plano.js, js/45-scripts.js, js/50-06b-scripts-fim.js, js/60-07a-busca-npm.js, js/55-terminal.js, js/65-exportar.js, js/70-integracao.js, js/75-celular.js, js/80-lab-base.js, js/85-lab-mapa.js, js/90-lab-previa.js, js/91-lab-pesquisa.js, js/93-15a-tar.js, js/92-lab-comparar.js, js/94-lab-ferramentas.js, js/95-lab-termux.js (pelo APP).
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 33 — `js/99-app.js` e conferir
+### Passo 39 — `js/99-app.js` e conferir
 
 ```text
-Crie js/99-app.js: ele olha APP.modulos e monta o menu/abas com um botão para cada módulo. Depois, me mande o index.html atualizado com todos os <script src="js/…"> na ordem certa: js/00-core.js, js/10-preload.js, js/15-casca.js, js/20-importar.js, js/25-dependencias.js, js/30-analisar.js, js/35-plano.js, js/40-05a-markdown.js, js/45-scripts.js, js/50-06b-scripts-fim.js, js/55-terminal.js, js/60-07a-busca-npm.js, js/65-exportar.js, js/70-integracao.js, js/75-celular.js, js/80-lab-base.js, js/85-lab-mapa.js, js/90-lab-previa.js, js/91-lab-pesquisa.js, js/92-lab-comparar.js, js/93-15a-tar.js, js/94-lab-ferramentas.js, js/95-juntar.js, js/96-kit-replit.js, js/97-organizar.js, js/98-servir.js, js/98-arrumador.js, js/98-colador.js, js/98-faxina.js, js/98-numerador.js, js/98-preparador.js, js/98-hub.js, js/98-inicio.js, js/99-app.js.
+Crie js/99-app.js: ele olha APP.modulos e monta o menu/abas com um botão para cada módulo. Depois, me mande o index.html atualizado com todos os <script src="js/…"> na ordem certa: js/00-core.js, js/10-preload.js, js/15-casca.js, js/20-importar.js, js/25-dependencias.js, js/30-analisar.js, js/35-plano.js, js/40-05a-markdown.js, js/45-scripts.js, js/50-06b-scripts-fim.js, js/55-terminal.js, js/60-07a-busca-npm.js, js/65-exportar.js, js/70-integracao.js, js/75-celular.js, js/80-lab-base.js, js/85-lab-mapa.js, js/90-lab-previa.js, js/91-lab-pesquisa.js, js/92-lab-comparar.js, js/93-15a-tar.js, js/94-lab-ferramentas.js, js/95-lab-termux.js, js/96-juntar.js, js/97-kit-replit.js, js/98-organizar.js, js/98-servir.js, js/98-ai-code-studio.js, js/98-arrumador.js, js/98-colador.js, js/98-faxina.js, js/98-iara-suite.js, js/98-juntador.js, js/98-numerador.js, js/98-preparador.js, js/98-projeto-lab.js, js/98-replicador.js, js/98-hub.js, js/98-inicio.js, js/99-app.js.
 ```
 
 ## 5. Conferir no final

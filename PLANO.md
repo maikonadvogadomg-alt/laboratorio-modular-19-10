@@ -1,19 +1,19 @@
 # 📋 Plano do projeto: Laboratorio-modular-19-10
 
-_Gerado em 19/10/2026, 11:20:53 — sem IA, lendo os arquivos._
+_Gerado em 19/10/2026, 13:57:05 — sem IA, lendo os arquivos._
 
 ## 📊 Visão geral
 | Item | Valor |
 |---|---|
-| Arquivos | 75 |
-| Linhas | 16.677 |
-| Telas/páginas | 7 |
+| Arquivos | 78 |
+| Linhas | 22.972 |
+| Telas/páginas | 12 |
 | Rotas do backend | 0 |
 | Chamadas do app | 0 |
 | Tabelas do banco | 0 |
 | Variáveis de ambiente | 2 |
 
-**Linguagens:** JavaScript (26), Imagem (15), CSS (11), HTML (7), JSON (3), Python (3), Markdown (3), YAML (2), Outros (2), Imagem SVG (2), Ícone (1)
+**Linguagens:** JavaScript (27), Imagem (15), HTML (12), CSS (11), Python (3), Outros (2), Imagem SVG (2), Markdown (2), JSON (2), YAML (1), Ícone (1)
 
 ## 💡 O que fazer (em ordem)
 1. 🧹 Tirar a Replit de 6 arquivo(s) (🏗️ Preparar → Fazer tudo)
@@ -32,11 +32,16 @@ _Gerado em 19/10/2026, 11:20:53 — sem IA, lendo os arquivos._
 ## 📱 Telas e páginas
 | Endereço | Arquivo |
 |---|---|
+| `ferramentas/ai-code-studio.html` | ferramentas/ai-code-studio.html |
 | `ferramentas/arrumador.html` | ferramentas/arrumador.html |
 | `ferramentas/colador.html` | ferramentas/colador.html |
 | `ferramentas/faxina.html` | ferramentas/faxina.html |
+| `ferramentas/iara-suite.html` | ferramentas/iara-suite.html |
+| `ferramentas/juntador.html` | ferramentas/juntador.html |
 | `ferramentas/numerador.html` | ferramentas/numerador.html |
 | `ferramentas/preparador.html` | ferramentas/preparador.html |
+| `ferramentas/projeto-lab.html` | ferramentas/projeto-lab.html |
+| `ferramentas/replicador.html` | ferramentas/replicador.html |
 | `hub.html` | hub.html |
 | `index.html` | index.html |
 
@@ -93,7 +98,6 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 ```
 ├─ 📁 .github/
 │  └─ 📁 workflows/
-│     ├─ apk.yml
 │     └─ desktop-exe.yml
 ├─ 📁 css/
 │  ├─ 00-casca.css
@@ -111,11 +115,16 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 │  ├─ main.cjs
 │  └─ preload.cjs
 ├─ 📁 ferramentas/
+│  ├─ ai-code-studio.html
 │  ├─ arrumador.html
 │  ├─ colador.html
 │  ├─ faxina.html
+│  ├─ iara-suite.html
+│  ├─ juntador.html
 │  ├─ numerador.html
-│  └─ preparador.html
+│  ├─ preparador.html
+│  ├─ projeto-lab.html
+│  └─ replicador.html
 ├─ 📁 icons/
 │  ├─ apple-touch-icon.png
 │  ├─ icon-128.png
@@ -154,7 +163,8 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 │  ├─ 14-lab-pesquisa.js
 │  ├─ 15-lab-comparar.js
 │  ├─ 15a-tar.js
-│  └─ 16-lab-ferramentas.js
+│  ├─ 16-lab-ferramentas.js
+│  └─ 17-lab-termux.js
 ├─ 📁 kits/
 │  ├─ juntar.py
 │  ├─ kit-replit.cjs
@@ -164,7 +174,6 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 │  ├─ jszip.min.js
 │  └─ pako.min.js
 ├─ .gitignore
-├─ apk.config.json
 ├─ favicon.ico
 ├─ hub.html
 ├─ hub.webmanifest
@@ -173,6 +182,5 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 ├─ manifest.json
 ├─ package.json
 ├─ PLANO.md
-├─ RECEITA.md
 └─ service-worker.js
 ```

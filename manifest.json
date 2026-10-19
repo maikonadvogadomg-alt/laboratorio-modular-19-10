@@ -1,8 +1,8 @@
 {
-  "name": "laboratoriomodular1910",
-  "short_name": "laboratoriom",
+  "name": "Laboratorio-modular-19-10",
+  "short_name": "Laboratorio-",
   "description": "Laboratorio-modular-19-10",
-  "id": "./app-laboratoriomodular1910",
+  "id": "./app-laboratorio-modular-19-10",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
